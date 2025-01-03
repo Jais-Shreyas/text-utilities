@@ -68,6 +68,22 @@ export default function TextInput({ dark }) {
     display: 'inline-block',
     width: 'fit-content'
   }
+  const handleCommaSeparate = () => {
+    let newText = text;
+    while (newText.indexOf("\n") !== -1) {
+      newText = newText.replace("\n", " ");
+    }
+    newText = newText.split(/[ ]+/);
+    setText(newText.join(", "));
+  }
+  const handleSemicolonSeparate = () => {
+    let newText = text;
+    while (newText.indexOf("\n") !== -1) {
+      newText = newText.replace("\n", " ");
+    }
+    newText = newText.split(/[ ]+/);
+    setText(newText.join("; "));
+  }
   const countWords = (str) => {
     let count = 0;
     str = str.trim();
@@ -96,6 +112,8 @@ export default function TextInput({ dark }) {
         <button className="btn btn-light text-dark btn btn-outline-success mt-2 me-3" onClick={handleUpperConvert}>UpperCase</button>
         <button className="btn btn-light text-dark btn btn-outline-success mt-2 me-3" onClick={handleLowerConvert}>LowerCase</button>
         <button className="btn btn-light text-dark btn btn-outline-success mt-2 me-3" onClick={handleEmails}>Fetch Email IDs</button>
+        <button className="btn btn-light text-dark btn btn-outline-success mt-2 me-3" onClick={handleCommaSeparate}>Comma Separate words</button>
+        <button className="btn btn-light text-dark btn btn-outline-success mt-2 me-3" onClick={handleSemicolonSeparate}>SemiColon Separate words</button>
         <button className="btn btn-light text-dark btn btn-outline-info mt-2 me-3" onClick={handleSpaces}>Remove extra spaces</button>
         <button className="btn btn-light text-dark btn btn-outline-danger mt-2 me-3" onClick={handleClear}>Clear Text</button>
         <button className="btn btn-light text-dark btn btn-outline-primary mt-2 me-3" onClick={handleCopy}>Copy Text</button>
