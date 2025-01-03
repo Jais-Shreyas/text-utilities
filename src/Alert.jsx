@@ -1,7 +1,10 @@
 export default function Alert({ alert }) {
-  return (alert && 
-    <div class={`alert alert-${alert.type}`} role="alert">
-      {alert.message}  
+  return (
+    <div style={{height: '1rem'}}>
+      {alert &&
+        <div className={`alert alert-${alert.type}`} role="alert">
+          {alert.message}
+        </div>}
     </div>
   )
 }
