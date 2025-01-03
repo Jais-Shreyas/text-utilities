@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TextArea from './TextArea';
 import Alert from './Alert';
+import './TextInput.css';
 export default function TextInput({ dark }) {
   const [text, setText] = useState("");
   const [alert, setAlert] = useState(null);
@@ -109,14 +110,14 @@ export default function TextInput({ dark }) {
         <Alert alert={alert} />
         <label htmlFor="inputText" className={`form-label text-${!dark ? 'dark' : 'light'}`}><h3>Enter your text below</h3></label>
         <textarea style={{backgroundColor: `${dark ? 'cornsilk' : 'white'}`}} onChange={(e) => handleOnChange(e)} className="form-control" id="inputText" rows="8" value={text}></textarea>
-        <button className={`btn ${text ? '' : 'disabled'} btn-outline-success mt-2 me-3`} onClick={handleUpperConvert}>UpperCase</button>
-        <button className={`btn ${text ? '' : 'disabled'} btn-outline-success mt-2 me-3`} onClick={handleLowerConvert}>LowerCase</button>
-        <button className={`btn ${text ? '' : 'disabled'} btn-outline-success mt-2 me-3`} onClick={handleEmails}>Fetch Email IDs</button>
-        <button className={`btn ${text ? '' : 'disabled'} btn-outline-success mt-2 me-3`} onClick={handleCommaSeparate}>Comma Separate words</button>
-        <button className={`btn ${text ? '' : 'disabled'} btn-outline-success mt-2 me-3`} onClick={handleSemicolonSeparate}>SemiColon Separate words</button>
-        <button className={`btn ${text ? '' : 'disabled'} btn-outline-info mt-2 me-3`} onClick={handleSpaces}>Remove extra spaces</button>
-        <button className={`btn ${text ? '' : 'disabled'} btn-outline-danger mt-2 me-3`} onClick={handleClear}>Clear Text</button>
-        <button className={`btn ${text ? '' : 'disabled'} btn-outline-primary mt-2 me-3`} onClick={handleCopy}>Copy Text</button>
+        <button className={`btn ${text ? '' : 'disabled'} ${dark ? 'dark' : 'light'} success btn-outline-success mt-2 me-3`} onClick={handleUpperConvert}>UpperCase</button>
+        <button className={`btn ${text ? '' : 'disabled'} ${dark ? 'dark' : 'light'} success btn-outline-success mt-2 me-3`} onClick={handleLowerConvert}>LowerCase</button>
+        <button className={`btn ${text ? '' : 'disabled'} ${dark ? 'dark' : 'light'} success btn-outline-success mt-2 me-3`} onClick={handleEmails}>Fetch Email IDs</button>
+        <button className={`btn ${text ? '' : 'disabled'} ${dark ? 'dark' : 'light'} success btn-outline-success mt-2 me-3`} onClick={handleCommaSeparate}>Comma Separate words</button>
+        <button className={`btn ${text ? '' : 'disabled'} ${dark ? 'dark' : 'light'} success btn-outline-success mt-2 me-3`} onClick={handleSemicolonSeparate}>SemiColon Separate words</button>
+        <button className={`btn ${text ? '' : 'disabled'} ${dark ? 'dark' : 'light'} info btn-outline-info mt-2 me-3`} onClick={handleSpaces}>Remove extra spaces</button>
+        <button className={`btn ${text ? '' : 'disabled'} ${dark ? 'dark' : 'light'} danger btn-outline-danger mt-2 me-3`} onClick={handleClear}>Clear Text</button>
+        <button className={`btn ${text ? '' : 'disabled'} ${dark ? 'dark' : 'light'} primary btn-outline-primary mt-2 me-3`} onClick={handleCopy}>Copy Text</button>
         <TextArea value={'Words:  ' + countWords(text) + '\nCharacters:  ' + countChars(text)} color={`${dark ? 'cornsilk' : 'white'}`}/>
       </div>
     </>

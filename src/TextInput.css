@@ -1,0 +1,48 @@
+.success.dark {
+  color: #71d671;
+  border-color: #71d671;
+}
+
+.success.dark:hover {
+  color: white;
+}
+
+.success.light {
+  color: #0e6c40;
+  border-color: #0e6c40;
+}
+
+.success.light:hover {
+  color: white;
+}
+
+.info.light {
+  /* color: #215c68; */
+  color: rgb(40, 40, 189);
+  border-color: rgb(40, 40, 189);
+  /* border-color: #215c68; */
+}
+
+.info.light:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(40, 40, 189);
+}
+
+.info.dark {
+  color: #3cdcfc;
+  border-color: #3cdcfc;
+}
+
+.info.dark:hover {
+  color: black;
+  background-color: #3cdcfc;
+}
+
+.primary.dark {
+  color: #3c88f8;
+  border-color: #3c88f8;
+}
+.primary.dark:hover {
+  color: white;
+  background-color: #3c88f8;
+}
