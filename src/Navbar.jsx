@@ -4,7 +4,7 @@ export default function Navbar({ dark, changeMode, page }) {
     <nav className={`navbar ${dark ? 'navbar-dark bg-dark' : 'navbar-light bg-light'} navbar-expand-lg bg-body-tertiary`}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">TextUtils</a>
-        <button className="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button className={`navbar-toggler bg-${dark ? 'dark' : 'light'}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
